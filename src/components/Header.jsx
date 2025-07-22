@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router-dom'
 const Header = () => {
     return (
         <header>
-            <NavLink to="/" className={({ isActive, isPending, isTransitioning }) => [
+            <NavLink to="/auth " className={({ isActive, isPending, isTransitioning }) => [
                 isPending ? "pending" : "",
                 isActive ? "navActive" : "",
                 isTransitioning ? "" : ""

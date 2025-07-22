@@ -1,10 +1,17 @@
-import React from 'react'
+import { NavLink, Outlet } from "react-router-dom";
+
 
 const Home = () => {
+
     return (
-        <div>
-            Home Page
-        </div>
+        <>
+            <div className='header'>
+                <NavLink to={"/auth/login"}>Login</NavLink>
+                <NavLink to={"/auth/signup"}>SignUp</NavLink>
+
+            </div>
+            <Outlet />
+        </>
     )
 }
 
