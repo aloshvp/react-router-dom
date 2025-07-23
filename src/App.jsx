@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Error from './components/Error';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import RequiredAuth from './components/RequiredAuth';
+import Product from './pages/Product';
 
 const router = createBrowserRouter([
   {
@@ -15,15 +17,15 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/auth",
+        path: "auth",
         element: <Home />,
         children: [
           {
-            path: "/auth/login",
+            path: "login",
             element: <Login />
           },
           {
-            path: "/auth/signup",
+            path: "signup",
             element: <SignUp />
           }
         ]
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
         path: "/posts/:postId",
         element: <PostComments />
       },
+      {
+        path: "/product",
+        element: <Product />
+      }
     ]
   }
 ]);
